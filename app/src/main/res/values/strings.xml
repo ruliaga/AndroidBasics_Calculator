@@ -13,7 +13,7 @@
     <string name="buttonPlus">+</string>
     <string name="buttonMinus">-</string>
     <string name="buttonUmnozh">х</string>
-    <string name="buttonRazdel">/</string>
+    <string name="buttonDelenie">/</string>
     <string name="buttonRavno">=</string>
     <string name="buttonDot">.</string>
     <string name="buttonSbros">C</string>
