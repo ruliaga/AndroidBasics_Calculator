@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">KizhiCalculator</string>
     <string name="button1">1</string>
     <string name="button2">2</string>
     <string name="button3">3</string>
@@ -12,7 +12,7 @@
     <string name="button0">0</string>
     <string name="buttonPlus">+</string>
     <string name="buttonMinus">-</string>
-    <string name="buttonUmnozh">х</string>
+    <string name="buttonUmnozh">x</string>
     <string name="buttonDelenie">/</string>
     <string name="buttonRavno">=</string>
     <string name="buttonDot">.</string>
