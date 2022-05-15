@@ -30,7 +30,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button1"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -46,7 +45,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/buttonPlus"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -60,7 +58,6 @@
         android:id="@+id/button5"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button5"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -74,7 +71,6 @@
         android:id="@+id/button9"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button9"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -89,7 +85,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button3"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -104,7 +99,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button0"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -118,7 +112,6 @@
         android:id="@+id/button8"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button8"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -133,7 +126,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button4"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -147,7 +139,6 @@
         android:id="@+id/button6"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button6"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -161,7 +152,6 @@
         android:id="@+id/buttonRavno"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/ButtonRavno_color"
         android:text="@string/buttonRavno"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -176,7 +166,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/buttonMinus"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -191,7 +180,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button2"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -206,7 +194,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/buttonDelenie"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -220,7 +207,6 @@
         android:id="@+id/buttonDot"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/buttonDot"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -235,7 +221,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="360dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/button7"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -250,7 +235,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/buttonUmnozh"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -266,7 +250,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="399dp"
         android:layout_marginEnd="43dp"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/buttonSbros"
         android:textColor="@color/black"
         android:textSize="@dimen/ButtonTextSize"
@@ -291,12 +274,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="537dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/dayThemeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/daytheme"
+            android:textSize="14sp" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/nightThemeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nighttheme"
+            android:textSize="14sp" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

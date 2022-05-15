@@ -5,10 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.google.android.material.radiobutton.MaterialRadioButton;
+
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private TextView calcDisplayInput;
     private TextView calcDisplayResult;
@@ -20,9 +25,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme(R.style.DayTheme));
         setContentView(R.layout.activity_main);
         initView();
+        initThemeChooser();
     }
+    private void initThemeChooser() {
+        initRadioButton(findViewById(R.id.dayThemeRadio),
+                DayTheme);
+        initRadioButton(findViewById(R.id.nightThemeRadio),
+                NightTheme);
+        RadioGroup rg = findViewById(R.id.radioGroup);
+        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(DayTheme))).setChecked(true);
+    }
+    private void initRadioButton(View button, final int codeStyle){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setAppTheme(codeStyle);
+                recreate();
+            }
+        });
+    }
+
 
     private void initView() {// инициализируем по ID все вью
         calcDisplayInput = findViewById(R.id.calcDisplayInput);
@@ -66,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
     private void initButtonNumber(Button btn) {//нажатие числовых кнопок
         btn.setOnClickListener(v -> calcDisplayInput.setText((calcDisplayInput.getText())+String.valueOf(btn.getText())));

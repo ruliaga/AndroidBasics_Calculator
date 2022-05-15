@@ -17,4 +17,6 @@
     <string name="buttonRavno">=</string>
     <string name="buttonDot">.</string>
     <string name="buttonSbros">C</string>
+    <string name="daytheme">DayTheme</string>
+    <string name="nighttheme">NightTheme</string>
 </resources>
