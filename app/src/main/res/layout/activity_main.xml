@@ -74,13 +74,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSbros"
-        android:layout_width="290dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/buttonSbros"
         android:textSize="@dimen/ButtonTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonDelenie" />
 
@@ -244,30 +244,18 @@
         app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/settingsButton"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="32dp"
+        android:text="Настройки"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcDisplayResult">
-
-        <RadioButton
-            android:id="@+id/dayThemeRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DayTheme"
-            android:textSize="14sp" />
-
-        <RadioButton
-            android:id="@+id/nightThemeRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NightTheme"
-            android:textSize="14sp" />
-    </RadioGroup>
+        app:layout_constraintStart_toEndOf="@+id/buttonSbros"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDelenie" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

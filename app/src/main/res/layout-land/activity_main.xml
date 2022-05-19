@@ -274,30 +274,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/settingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:orientation="vertical"
+        android:text="Настройки"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/dayThemeRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/daytheme"
-            android:textSize="14sp" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/nightThemeRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/nighttheme"
-            android:textSize="14sp" />
-    </RadioGroup>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
