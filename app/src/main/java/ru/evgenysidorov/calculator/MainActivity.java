@@ -2,6 +2,8 @@ package ru.evgenysidorov.calculator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,26 +30,8 @@ public class MainActivity extends BaseActivity {
         setTheme(getAppTheme(R.style.DayTheme));
         setContentView(R.layout.activity_main);
         initView();
-        initThemeChooser();
-    }
-    private void initThemeChooser() {
-        initRadioButton(findViewById(R.id.dayThemeRadio),
-                DayTheme);
-        initRadioButton(findViewById(R.id.nightThemeRadio),
-                NightTheme);
-        RadioGroup rg = findViewById(R.id.radioGroup);
-        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(DayTheme))).setChecked(true);
-    }
-    private void initRadioButton(View button, final int codeStyle){
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAppTheme(codeStyle);
-                recreate();
-            }
-        });
-    }
 
+    }
 
     private void initView() {// инициализируем по ID все вью
         calcDisplayInput = findViewById(R.id.calcDisplayInput);
@@ -69,6 +53,8 @@ public class MainActivity extends BaseActivity {
         Button buttonMinus=findViewById(R.id.buttonMinus);
         Button buttonRavno=findViewById(R.id.buttonRavno);
         Button buttonSbros=findViewById(R.id.buttonSbros);
+        Button buttonSettings=findViewById(R.id.settingsButton);
+
 
 
         initButtonOperator(buttonPlus); //запускаем методы обработки нажатий кнопок
@@ -88,8 +74,18 @@ public class MainActivity extends BaseActivity {
         initButtonNumber(button9);
         initSbrosButton(buttonSbros);
         initRavnoButton(buttonRavno);
+        initButtonSettings(buttonSettings);
 
 
+    }
+    private void initButtonSettings(Button btn){
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent runSettings=new Intent(MainActivity.this,SettingsActivity.class);
+                startActivity(runSettings);
+            }
+        });
     }
 
 
